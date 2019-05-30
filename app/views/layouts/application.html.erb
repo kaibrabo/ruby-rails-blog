@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blog</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+    	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+
+	<body>
+		<header>
+			<h1>Closet</h1>
+
+			<ul>
+				<li>
+					<%= link_to  "Home", welcome_index_path %>
+				</link>
+				<li>
+					<%= link_to  "About", welcome_about_path %>
+				</li>
+				<li>
+					<%= link_to  "Contact", welcome_contact_path %>
+				</li>
+				<li>
+					<%= link_to  "FAQ", welcome_faq_path %>
+				</li>
+			</ul>
+		</header>
+
+		<%= yield %>
+	</body>
+</html>
