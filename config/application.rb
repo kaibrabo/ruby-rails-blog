@@ -15,5 +15,8 @@ module Blog
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # autoloads any references to the lib directory used by our code
+    config.autoload_paths << File.join(config.root, "lib")
   end
 end

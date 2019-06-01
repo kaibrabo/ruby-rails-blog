@@ -1,24 +1,6 @@
-# README
+## Troubleshooting
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://github.com/rails/rails/issues/26658#issuecomment-255590071
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+install:
+`gem 'rb-readline'` in development group
