@@ -50,6 +50,21 @@ header {
     list-style-type: none;
 }
 
+.flash-banner {
+    width: 100%;
+    height: 30px;
+    color: white;
+    text-align: center;
+}
+
+.notice {
+    background-color: green;
+}
+
+.alert {
+    background-color: red;
+}
+
 main {
     margin: 10px 10px 0;
 }

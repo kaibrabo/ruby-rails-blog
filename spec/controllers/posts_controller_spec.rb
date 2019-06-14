@@ -62,6 +62,7 @@ RSpec.describe PostsController, type: :controller do
 				}
 			}
 			expect(assigns(:post)).to eq Post.last
+			
 		end
 
 		it "redirects to the new post" do
