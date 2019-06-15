@@ -59,6 +59,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'rb-readline'
+
+  # formatter
+  gem 'rubocop-rails'
 end
 
 group :test do

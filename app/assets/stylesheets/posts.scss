@@ -1,0 +1,79 @@
+.posts-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.all-posts-title {
+    text-align: center;
+}
+
+.all-posts-buttons {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.new-post-button,
+.edit-post-button {
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    padding: 4px 5px 5px;
+}
+
+.post {
+    border: 0.5px solid gray;
+    border-bottom: none;
+    padding: 5px;
+}
+
+.post-title,
+.show-title-text {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 5px 5px 0;
+}
+
+.post-body {
+    margin: 10px 5px;
+    font-size: 14px;
+}
+
+// show view
+.show-container {
+    border: 0.5px solid gray;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.show-body {
+    margin: 5px 5px 15px 5px;
+}
+
+// new and edit views
+.new-post,
+.edit-post {
+    width: 100%;
+}
+
+.new-post h1 {
+    text-align: center;
+}
+
+.post-form {
+
+}
+
+.new-post-title,
+.edit-post-title {
+
+}
+
+.new-post-body,
+.edit-post-body {
+
+}
+
+.new-post-submit
+.edit-post-submit {
+
+}
+

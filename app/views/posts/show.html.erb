@@ -1,5 +1,16 @@
-<p>Title:</p>
-<p><%= @post.title %></p>
+<div class="show-container">
+    <div class="show-title">
+        <p class="show-title-text">
+            <%= @post.title %></p>
+    </div>
+    <div class="show-body">
+        <p class="show-body-text">
+            <%= @post.body %></p>
+    </div>
 
-<p>Body:</p>
-<p><%= @post.body %></p>
+    <div>
+        <button class="edit-post-button">
+            <%= link_to "Edit", edit_post_path %>
+        </button>
+    </div>
+</div>

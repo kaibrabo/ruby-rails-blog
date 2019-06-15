@@ -1,11 +1,23 @@
-<h1>New Post</h1>
+<div class="new-post">
+    <h1>New Post</h1>
 
-<%= form_for @post do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-    <%= f.submit "save" %>
+    <div class="post-form">
+        <%= form_for @post do |f| %>
+            <div class="new-post-title">
+                <%= f.label :title %>
+                <%= f.text_field :title %>
+            </div>        
+            
+            <div class="new-post-body">
+                <%= f.label :body %>
+                <%= f.text_area :body %>
+            </div>
 
-<% end %>
+            <div class="new-post-submit">
+                <%= f.submit "save" %>
+            </div>
+
+        <% end %>
+    </div>
+</div>
 
