@@ -11,7 +11,8 @@
             <%= @post.body %></p>
     </div>
 
-    <div class="edit-post-button-container">
+    <div class="post-buttons-container">
         <%= link_to "Edit", edit_post_path, :class => "edit-post-button" %>
+        <%= link_to "Delete", @post, method: :delete, :class => "delete-post-button", data: {confirm: 'Are you sure you want to delete this post?'} %>
     </div>
 </div>

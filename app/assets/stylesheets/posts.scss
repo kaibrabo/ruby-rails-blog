@@ -13,7 +13,8 @@
 }
 
 .new-post-button,
-.edit-post-button {
+.edit-post-button,
+.delete-post-button {
     border: 0.5px solid gray;
     border-radius: 2px;
     margin: 5px 0 10px;
@@ -38,7 +39,7 @@
     font-size: 14px;
 }
 
-.edit-post-button-container {
+.post-buttons-container {
     margin: 20px 0 10px;
 }
 
