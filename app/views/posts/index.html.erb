@@ -10,6 +10,7 @@
     <div class="posts-list">
         <% @posts.each do |post| %>
             <div class="post">
+            
                 <%= link_to(post)  do %>
                     <div class="post-title">
                         <%= post.title %>
@@ -19,9 +20,9 @@
                     </div>
                 <% end %>
 
-                <button class="edit-post-button">
-                    <%= link_to "Edit", edit_post_path(post) %>
-                </button>
+                <div class="edit-post-button-container">
+                    <%= link_to "Edit", edit_post_path(post), :class => "edit-post-button"%>
+                </div>
             </div>
         <% end %>
     </div>

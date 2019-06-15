@@ -4,13 +4,13 @@
     <div class="post-form">
         <%= form_for @post do |f| %>
             <div class="new-post-title">
-                <%= f.label :title %>
-                <%= f.text_field :title %>
+                <%= f.label :title, :class => "new-post-title-label" %>
+                <%= f.text_field :title, :class => "new-post-title-text" %>
             </div>        
             
             <div class="new-post-body">
-                <%= f.label :body %>
-                <%= f.text_area :body %>
+                <%= f.label :body, :class => "new-post-body-label" %>
+                <%= f.text_area :body, :class => "new-post-body-text" %>
             </div>
 
             <div class="new-post-submit">

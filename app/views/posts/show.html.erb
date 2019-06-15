@@ -1,16 +1,17 @@
 <div class="show-container">
+    <h1>Post <%= @post.id %></h1>
+
     <div class="show-title">
         <p class="show-title-text">
             <%= @post.title %></p>
     </div>
+    
     <div class="show-body">
         <p class="show-body-text">
             <%= @post.body %></p>
     </div>
 
-    <div>
-        <button class="edit-post-button">
-            <%= link_to "Edit", edit_post_path %>
-        </button>
+    <div class="edit-post-button-container">
+        <%= link_to "Edit", edit_post_path, :class => "edit-post-button" %>
     </div>
 </div>

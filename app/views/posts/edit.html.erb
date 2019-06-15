@@ -1,16 +1,18 @@
 <div class="edit-post">
-    <h1>Edit Post</h1>
+    <div class="edit-post-header">
+        <h1>Edit Post</h1>
+    </div>
 
     <div class="post-form">
         <%= form_for @post do |f| %>
             <div class="edit-post-title">
-                <%= f.label :title %>
-                <%= f.text_field :title %>
+                <%= f.label :title, :class => "edit-post-title-label" %>
+                <%= f.text_field :title, :class => "edit-post-title-text" %>
             </div>        
             
             <div class="edit-post-body">
-                <%= f.label :body %>
-                <%= f.text_area :body %>
+                <%= f.label :body, :class => "edit-post-body-label" %>
+                <%= f.text_area :body, :class => "edit-post-body-text" %>
             </div>
 
             <div class="edit-post-submit">
