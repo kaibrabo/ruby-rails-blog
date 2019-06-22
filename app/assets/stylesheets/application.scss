@@ -102,6 +102,12 @@ main {
     width: 700px;
 }
 
+.posts-container,
+.topics-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
 textarea {
     resize: none
 }

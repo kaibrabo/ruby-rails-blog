@@ -1,0 +1,16 @@
+<div class="topics-container">
+    <div class="show-title">
+        <p class="show-title-text">
+            <%= @topic.name %></p>
+    </div>
+
+    <div class="show-body">
+        <p class="show-body-text">
+            <%= @topic.description %></p>
+    </div>
+
+    <div class="topic-buttons-container">
+        <%= link_to "Edit", edit_topic_path, :class => "edit-topic-button" %>
+        <%= link_to "Delete", @topic, method: :delete, :class => "delete-topic-button", data: {confirm: 'Are you sure you want to delete this post?'} %>
+    </div>
+</div>

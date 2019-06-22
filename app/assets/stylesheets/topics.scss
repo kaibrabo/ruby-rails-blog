@@ -1,0 +1,123 @@
+.all-topics-title {
+    text-align: center;
+}
+
+.all-topics-buttons {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.new-topic-button,
+.edit-topic-button,
+.delete-topic-button {
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    margin: 5px 0 10px;
+    padding: 4px 10px 5px;
+}
+
+.topic-buttons-container {
+    margin: 20px 0 10px;
+}
+
+.show-body {
+    margin: 5px 5px 15px 5px;
+}
+
+.all-topics-title {
+    text-align: center;
+}
+
+.all-topics-buttons {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.new-topic-button,
+.edit-topic-button,
+.delete-topic-button {
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    margin: 5px 0 10px;
+    padding: 4px 10px 5px;
+}
+
+.topic {
+    border: 0.5px solid gray;
+    border-bottom: none;
+    padding: 5px;
+}
+
+.topic-container:last-child {
+    border-bottom: 0.5px solid gray;
+}
+
+.topic-title,
+.show-title-text {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 5px 5px 0;
+}
+
+.topic-body {
+    margin: 10px 5px;
+    font-size: 14px;
+}
+
+.topic-buttons-container {
+    margin: 20px 0 10px;
+}
+
+// new and edit views
+.new-topic,
+.edit-topic {
+    width: 100%;
+}
+
+.edit-topic-header {
+    display: flex;
+    justify-content: center;
+}
+
+.new-topic h1 {
+    text-align: center;
+}
+
+.topic-form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.new-topic-title,
+.edit-topic-title {
+    width: 100%;
+}
+
+.new-topic-title-label,
+.new-topic-body-label,
+.edit-topic-title-label,
+.edit-topic-body-label {
+    width: 100%;
+}
+
+.new-topic-title-text,
+.new-topic-body-text,
+.edit-topic-title-text,
+.edit-topic-body-text {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.new-topic-submit,
+.edit-topic-submit {
+    width: 50px;
+    text-align: center;
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    padding: 1px 5px 5px;
+}
