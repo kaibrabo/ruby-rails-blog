@@ -45,7 +45,8 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'rails-controller-testing'
-  gem "nyan-cat-formatter"
+  gem 'nyan-cat-formatter'
+  gem 'shoulda'
 end
 
 group :development do
