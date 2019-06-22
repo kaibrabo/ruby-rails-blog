@@ -2,17 +2,30 @@ require 'random_data'
 
 puts "Seeding start"
 
+# Creates 15 random topics
+15.times do
+   
+    Topic.create!(
+        name:           RandomData.random_sentence,
+        description:    RandomData.random_paragraph
+    ) 
+end
+
+topics = Topic.all
+
+puts "#{Topic.count} topics created"
+
 # Creates 50 random posts
 50.times do
     
     Post.create!(
-        title: RandomData.random_sentence,
-        body: RandomData.random_paragraph
+        topic:  topics.sample,
+        title:  RandomData.random_sentence,
+        body:   RandomData.random_paragraph
     )
 
 end
 
-# prints to console
 puts "#{Post.count} posts created"
 
 # sets all post objects to 'posts' 
