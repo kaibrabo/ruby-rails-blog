@@ -4,7 +4,7 @@
     </div>
 
     <div class="post-form">
-        <%= form_for @post do |f| %>
+        <%= form_for [@post.topic, @post] do |f| %>
             <div class="edit-post-title">
                 <%= f.label :title, :class => "edit-post-title-label" %>
                 <%= f.text_field :title, :class => "edit-post-title-text" %>

@@ -2,7 +2,7 @@
     <h1>New Post</h1>
 
     <div class="post-form">
-        <%= form_for @post do |f| %>
+        <%= form_for [@topic, @post] do |f| %>
             <div class="new-post-title">
                 <%= f.label :title, :class => "new-post-title-label" %>
                 <%= f.text_field :title, :class => "new-post-title-text" %>
