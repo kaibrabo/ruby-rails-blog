@@ -22,6 +22,10 @@
     padding: 5px;
 }
 
+.post:last-child {
+    border-bottom: 0.5px solid gray;
+}
+
 .post-title,
 .show-title-text {
     font-weight: 700;
