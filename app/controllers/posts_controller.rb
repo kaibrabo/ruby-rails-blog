@@ -1,19 +1,22 @@
 class PostsController < ApplicationController
-  def index
-		@posts = Post.all
-  end
-  
+	# Posts index on each Topic
+
   def new
+  	@topic = Topic.find(params[:topic_id])	# associating topic_id to post
 		@post = Post.new
   end
   
   def create
+		@topic = Topic.find(params[:topic_id])
 		@post = Post.new
+		
 		@post.title = params[:post][:title]
 		@post.body = params[:post][:body]
+		@post.topic = @topic
 		
 		if @post.save
-			redirect_to @topic, notice: "Post was saved successfully" 
+			flash[:notice] = "Post was saved successfully" 
+			redirect_to [@topic, @post]
 		else
 		  flash.now[:alert] = "There was something wrong, try again?"
 		  render :new
@@ -34,8 +37,8 @@ class PostsController < ApplicationController
 		@post.body = params[:post][:body]
 
 	if @post.save
-    redirect_to @topic, notice: "Topic was saved successfully" 
-
+    flash[:notice] = "Topic was saved successfully" 
+    redirect_to [@post.topic, @post]
 	else
 		flash.now[:alert] = "There was something wrong, try again?"
 		render :edit
@@ -47,7 +50,7 @@ class PostsController < ApplicationController
 	
 		if @post.destroy
 			flash[:notice] = "#{@post.title} was deleted successfully"
-			redirect_to posts_path
+			redirect_to @post.topic
 		else
 			flash.now[:alert] = "There was something wrong, try again?"
 			render :show
