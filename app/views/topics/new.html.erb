@@ -14,8 +14,9 @@
                 <%= f.text_area :description, :class => "new-topic-body-text" %>
             </div>
 
-            <div class="new-topic-submit">
-                <%= f.submit "save" %>
+            <div class="new-post-buttons">
+                <%= f.submit "save", :class => "new-post-submit" %>
+                <%= link_to "cancel", topics_path, :class => "cancel-button" %>
             </div>
 
         <% end %>

@@ -12,9 +12,10 @@
                 <%= f.label :body, :class => "new-post-body-label" %>
                 <%= f.text_area :body, :class => "new-post-body-text" %>
             </div>
-
-            <div class="new-post-submit">
-                <%= f.submit "save" %>
+            
+            <div class="new-post-buttons">
+                <%= f.submit "save", :class => "new-post-submit" %>
+                <%= link_to "cancel", topic_path(@topic), :class => "cancel-button" %>
             </div>
 
         <% end %>

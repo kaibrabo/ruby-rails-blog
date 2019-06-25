@@ -15,10 +15,10 @@
                 <%= f.text_area :body, :class => "edit-post-body-text" %>
             </div>
 
-            <div class="edit-post-submit">
-                <%= f.submit "save" %>
+            <div class="edit-post-buttons">
+                <%= f.submit "save", :class => "edit-post-submit" %>
+                <%= link_to "cancel", topic_path(@post.topic), :class => "cancel-button" %>
             </div>
-
         <% end %>
     </div>
 </div>
