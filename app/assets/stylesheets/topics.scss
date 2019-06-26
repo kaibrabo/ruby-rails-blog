@@ -2,44 +2,8 @@
     text-align: center;
 }
 
-.all-topics-buttons {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.new-topic-button,
-.edit-topic-button,
-.delete-topic-button {
-    border: 0.5px solid gray;
-    border-radius: 2px;
-    margin: 5px 0 10px;
-    padding: 4px 10px 5px;
-}
-
-.topic-buttons-container {
-    margin: 20px 0 10px;
-}
-
 .show-body {
     margin: 5px 5px 15px 5px;
-}
-
-.all-topics-title {
-    text-align: center;
-}
-
-.all-topics-buttons {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.new-topic-button,
-.edit-topic-button,
-.delete-topic-button {
-    border: 0.5px solid gray;
-    border-radius: 2px;
-    margin: 5px 0 10px;
-    padding: 4px 10px 5px;
 }
 
 .topic {
@@ -117,6 +81,30 @@
     box-sizing: border-box;
 }
 
+.all-topics-buttons {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.new-topic-button,
+.edit-topic-button,
+.delete-topic-button {
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    margin: 5px 0 10px;
+    padding: 4px 10px 5px;
+}
+
+.topic-buttons-container {
+    margin: 20px 0 10px;
+}
+
+.new-topic-buttons {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .new-topic-submit,
 .edit-topic-submit,
 .cancel-button {
@@ -129,4 +117,8 @@
 
 .cancel-button {
     padding: 1px 8px 5px; 
+}
+
+.topic-button {
+    padding: 3px 8px 4px;
 }
