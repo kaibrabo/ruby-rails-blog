@@ -4,21 +4,7 @@
     </div>
 
     <div class="post-form">
-        <%= form_for [@post.topic, @post] do |f| %>
-            <div class="edit-post-title">
-                <%= f.label :title, :class => "edit-post-title-label" %>
-                <%= f.text_field :title, :class => "edit-post-title-text" %>
-            </div>        
-            
-            <div class="edit-post-body">
-                <%= f.label :body, :class => "edit-post-body-label" %>
-                <%= f.text_area :body, :class => "edit-post-body-text" %>
-            </div>
-
-            <div class="edit-post-buttons">
-                <%= f.submit "save", :class => "edit-post-submit" %>
-                <%= link_to "cancel", topic_path(@post.topic), :class => "cancel-button" %>
-            </div>
-        <% end %>
+        <%= render partial: 'form', 
+            locals: {topic: @post.topic, post: @post} %>
     </div>
 </div>

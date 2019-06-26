@@ -2,23 +2,8 @@
     <h1>New Post</h1>
 
     <div class="post-form">
-        <%= form_for [@topic, @post] do |f| %>
-            <div class="new-post-title">
-                <%= f.label :title, :class => "new-post-title-label" %>
-                <%= f.text_field :title, :class => "new-post-title-text" %>
-            </div>        
-            
-            <div class="new-post-body">
-                <%= f.label :body, :class => "new-post-body-label" %>
-                <%= f.text_area :body, :class => "new-post-body-text" %>
-            </div>
-            
-            <div class="new-post-buttons">
-                <%= f.submit "save", :class => "new-post-submit" %>
-                <%= link_to "cancel", topic_path(@topic), :class => "cancel-button" %>
-            </div>
-
-        <% end %>
+        <%= render partial: 'form',
+            locals: {topic: @topic, post: @post} %>
     </div>
 </div>
 

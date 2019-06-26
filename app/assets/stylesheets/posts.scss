@@ -62,22 +62,17 @@
     margin: 0 auto;
 }
 
-.new-post-title,
-.edit-post-title {
+.form-post-title {
     width: 100%;
 }
 
-.new-post-title-label,
-.new-post-body-label,
-.edit-post-title-label,
-.edit-post-body-label {
+.form-post-title-label,
+.form-post-body-label {
     width: 100%;
 }
 
-.new-post-title-text,
-.new-post-body-text,
-.edit-post-title-text,
-.edit-post-body-text {
+.form-post-title-text,
+.form-post-body-text {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -87,15 +82,13 @@
     box-sizing: border-box;
 }
 
-.new-post-buttons,
-.edit-post-buttons {
+.form-post-buttons {
     width: 130px;
     display: flex;
     justify-content: space-between;
 }
 
-.new-post-submit,
-.edit-post-submit,
+.form-post-submit,
 .cancel-button {
     width: 50px;
     text-align: center;
@@ -109,6 +102,11 @@
 }
 
 // show view
+.post-show {
+    width: 500px;
+    margin: 0 auto;
+}
+
 .show-container {
     width: 500px;
     border: 0.5px solid gray;
