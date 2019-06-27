@@ -5,18 +5,18 @@
     <div class="topic-form">
         <%= form_for @topic do |f| %>
             <div class="new-topic-title">
-                <%= f.label :name, :class => "new-topic-title-label" %>
-                <%= f.text_field :name, :class => "new-topic-title-text" %>
+                <%= f.label :name, class: "new-topic-title-label" %>
+                <%= f.text_field :name, class: "new-topic-title-text" %>
             </div>        
             
             <div class="new-topic-body">
-                <%= f.label :description, :class => "new-topic-body-label" %>
-                <%= f.text_area :description, :class => "new-topic-body-text" %>
+                <%= f.label :description, class: "new-topic-body-label" %>
+                <%= f.text_area :description, class: "new-topic-body-text" %>
             </div>
 
             <div class="new-topic-buttons">
-                <%= f.submit "save", :class => "new-topic-submit" %>
-                <%= link_to "cancel", topics_path, :class => "cancel-button" %>
+                <%= f.submit "save", class: "new-topic-submit" %>
+                <%= link_to "cancel", topics_path, class: "cancel-button" %>
             </div>
 
         <% end %>

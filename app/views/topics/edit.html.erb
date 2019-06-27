@@ -6,18 +6,18 @@
     <div class="topic-form">
         <%= form_for @topic do |f| %>
             <div class="edit-topic-title">
-                <%= f.label :name, :class => "edit-topic-title-label" %>
-                <%= f.text_field :name, :class => "edit-topic-title-text" %>
+                <%= f.label :name, class: "edit-topic-title-label" %>
+                <%= f.text_field :name, class: "edit-topic-title-text" %>
             </div>        
             
             <div class="edit-topic-body">
-                <%= f.label :description, :class => "edit-topic-body-label" %>
-                <%= f.text_area :description, :class => "edit-topic-body-text" %>
+                <%= f.label :description, class: "edit-topic-body-label" %>
+                <%= f.text_area :description, class: "edit-topic-body-text" %>
             </div>
 
             <div class="edit-post-buttons">
-                <%= f.submit "save", :class => "edit-post-submit" %>
-                <%= link_to "cancel", topic_path(@topic), :class => "cancel-button" %>
+                <%= f.submit "save", class: "edit-post-submit" %>
+                <%= link_to "cancel", topic_path(@topic), class: "cancel-button" %>
             </div>
         <% end %>
     </div>

@@ -1,0 +1,41 @@
+<div class="new-user-form">
+    <%= form_for @user do |f| %>
+        <div class="new-user-errors">
+            <% if @user.errors.any? %>
+                <div>
+                    <h4>
+                        <%= pluralize(@user.errors.count, "error") %>.
+                    </h4>
+
+                    <ul>
+                        <% @user.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+        </div>
+
+        <%= form_group_tag(@user.errors[:name]) do %>
+            <p><%= f.label :name %></p>
+            <%= f.text_field :name, autofocus: true, placeholder: "Enter name", class: "form-input" %>
+        <% end %>
+        <%= form_group_tag(@user.errors[:email]) do %>
+            <p><%= f.label :email %></p>
+            <%= f.email_field :email, placeholder: "Enter email", class: "form-input" %>
+        <% end %>
+        <%= form_group_tag(@user.errors[:password]) do %>
+            <p><%= f.label :password %></p>
+            <%= f.password_field :password, placeholder: "Enter password", class: "form-input" %>
+        <% end %>
+        <%= form_group_tag(@user.errors[:password_confirmation]) do %>
+            <p><%= f.label :password_confirmation %></p>
+            <%= f.password_field :password_confirmation, placeholder: "Enter password confirmation", class: "form-input" %>
+        <% end %>
+
+        <div class="form-user-buttons">
+            <%= f.submit "submit", class: "form-user-submit" %>
+            <%= link_to "cancel", root_path, class: "cancel-button" %>
+        </div>
+    <% end %>
+</div>
