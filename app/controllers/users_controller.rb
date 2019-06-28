@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         @user.password_confirmation = params[:user][:password_confirmation]
 
         if @user.save
-            create_session(@user)
+            create_session(@user)   # persists logged in user
             redirect_to root_path, notice: "Welcome, #{@user.name}!"
         else
             flash.now[:alert] = "Something went wrong, try again?"

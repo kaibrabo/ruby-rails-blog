@@ -23,7 +23,7 @@ module RandomData
         # joins strings into one string with space in between each word
         sentence = strings.join(" ")
         # capitalize string and add a period to the end
-        sentence.capitalize << "."
+        sentence.capitalize << ".  "
     end
 
     def self.random_word
@@ -35,6 +35,6 @@ module RandomData
         letters.shuffle!
         # joins the first and up to 8 chars
         # to create a word
-        letters[0, rand(3..8)].join
+        letters[0, rand(3..6)].join
     end
 end
