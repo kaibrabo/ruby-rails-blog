@@ -50,5 +50,16 @@
 }
 
 .new-session-sign-up {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.new-session-sign-up-button {
+    width: 70px;
+    text-align: center;
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    padding: 2px 5px 4px;
 }
