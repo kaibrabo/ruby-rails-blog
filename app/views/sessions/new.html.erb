@@ -1,0 +1,28 @@
+<div class="new-session-form">
+    <h2 class="new-session-title">Sign In</h2>
+    <%= form_for :session, url: sessions_path do |f|  %>
+        <div>
+            <p><%= f.label :email %></p>
+            <%= f.email_field :email, placeholder: "Enter email", class: "form-input" %>
+        </div>
+        <div>
+            <p><%= f.label :password %></p>
+            <%= f.password_field :password, placeholder: "Enter password", class: "form-input" %>
+        </div>
+        <div class="form-session-remember-me">
+            <%= f.label :remember_me, class: 'checkbox' do %>
+            <%= f.check_box :remember_me, class: "remember-checkbox"  %>
+            Remember Me 
+            <% end %>
+        </div>
+        <div class="form-session-buttons">
+            <%= f.submit "sign in", class: "form-session-submit" %>
+            <%= link_to "cancel", root_path, class: "cancel-button" %>
+        </div>
+    <% end %>
+
+    <div class="new-session-sign-up">
+        <p>Can't sign in? Create a new account!<p>
+        <%= link_to "Sign Up", new_user_path, class: "link_to" %>
+    </div>
+</div>

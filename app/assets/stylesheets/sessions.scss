@@ -1,0 +1,54 @@
+.new-session-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.new-session-title {
+    font-size: 16px;
+    margin: 16px auto;
+}
+
+.new-session-errors {
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-input {
+    max-width: 400px;
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-session-remember-me {
+    margin: 20px 0 0;
+}
+
+.form-session-buttons {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.form-session-submit,
+.cancel-button {
+    width: 61px;
+    text-align: center;
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    padding: 1px 5px 5px;
+}
+
+.new-session-sign-up {
+    
+}
