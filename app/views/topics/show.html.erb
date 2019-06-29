@@ -37,7 +37,7 @@
                             <%= post.body %>
                         </div>
                         <div>
-                            <p>submitted <%= time_ago_in_words(post.created_at) %> ago</p>
+                            <p>submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %></p>
                             <p><%= post.comments.count %> Comments</p>
                         </div>
                     <% end %>

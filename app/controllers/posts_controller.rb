@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 	# Posts index on each Topic
+	before_action :require_sign_in, except: :show
 
 	def new
 		@topic = Topic.find(params[:topic_id])	# associating topic_id to post
@@ -8,11 +9,9 @@ class PostsController < ApplicationController
 
 	def create
 		@topic = Topic.find(params[:topic_id])
-		@post = Post.new
+		@post = @topic.posts.build(post_params)
 
-		@post.title = params[:post][:title]
-		@post.body = params[:post][:body]
-		@post.topic = @topic
+		@post.user = current_user
 
 		if @post.save
 			flash[:notice] = "Post was saved successfully" 
@@ -33,8 +32,7 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
-		@post.title = params[:post][:title]
-		@post.body = params[:post][:body]
+		@post.assign_attributes(post_params)
 
 		if @post.save
 			flash[:notice] = "Topic was saved successfully" 
@@ -55,5 +53,11 @@ class PostsController < ApplicationController
 			flash.now[:alert] = "There was something wrong, try again?"
 			render :show
 		end
+	end
+
+	private
+
+	def post_params
+		params.require(:post).permit(:title, :body)
 	end
 end

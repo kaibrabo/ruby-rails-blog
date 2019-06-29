@@ -6,6 +6,7 @@
         <div class="show-title">
             <p class="show-title-text">
                 <%= @post.title %></p>
+                <p>submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %></p>
         </div>
         
         <div class="show-body">

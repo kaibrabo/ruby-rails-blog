@@ -6,11 +6,21 @@ RSpec.describe Comment, type: :model do
 			name: RandomData.random_sentence, 
 			description: RandomData.random_paragraph
 	)}
+
+	let(:user) { 
+		User.create!(
+			name: "testUser", 
+			email: "user@test.com", 
+			password: "password"
+	)}
+
 	let(:post) { 
 		topic.posts.create!(
 			title: RandomData.random_sentence, 
-			body: RandomData.random_paragraph
+			body: RandomData.random_paragraph,
+			user: user
 	)}
+	
 	let(:comment) { 
 		Comment.create!(
 			body: "Comment Body", 
