@@ -32,8 +32,10 @@
 				</li>
 				<% if current_user %>
 					<li>
-						<p>{current_user.name}<p>
-						<%= link_to "Sign Out", session_path(current_user), method: :delete %>
+						<p>
+							<%= current_user.name %> - 
+							<%= link_to "Sign Out", session_path(current_user), method: :delete %>
+						<p>
 					</li>
 				<% else %>
 					<li>
