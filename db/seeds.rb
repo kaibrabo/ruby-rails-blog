@@ -11,14 +11,36 @@ puts "Seeding start"
     )
 end
 
-users = User.all
-
-user = User.first
-user.update_attributes!(
-    email: "kaibrabo@gmail.com",
-    password: "password"
+# Create an admin user
+admin = User.create!(
+    name:     'Admin User',
+    email:    'admin@test.com',
+    password: 'password',
+    role:     'admin'
 )
 
+puts "Admin user created"
+
+# Create a moderator user
+moderator = User.create!(
+    name:     'Moderator User',
+    email:    'mod@test.com',
+    password: 'password',
+    role:     'moderator'
+)
+
+puts "Moderator user created"
+    
+# Create a member
+member = User.create!(
+    name:     'Member User',
+    email:    'member@test.com',
+    password: 'password'
+)
+
+puts "Member user created"
+        
+users = User.all
 puts "#{User.count} users created"
 
 # Creates 15 random topics
