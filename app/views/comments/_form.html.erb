@@ -1,0 +1,13 @@
+<div class="add-comment">
+    <h3>add comment</h3>
+
+    <%= form_for [post, comment] do |f| %>
+        <div class="form-comment">
+            <%= f.label :body, ">", class: "form-body-label sr-only" %>          
+            <%# 'sr-only' class adds a hidden label for users using screen readers %>
+            <%= f.text_field :body, class: "form-body-input", placeholder: "add a comment.." %>
+        </div>
+
+        <%= f.submit "add", class: "form-post-submit" %>
+    <% end %>
+</div>

@@ -13,6 +13,8 @@ RSpec.describe Post, type: :model do
 	
 	it { should belong_to(:topic) }
 	it { should belong_to(:user) }
+	
+	it { is_expected.to have_many(:comments) }
 
 	it { is_expected.to validate_presence_of(:title) }
 	it { is_expected.to validate_presence_of(:body) }
