@@ -2,6 +2,7 @@ class Post < ApplicationRecord
     belongs_to :topic
     belongs_to :user
     has_many :comments, dependent: :destroy
+    has_many :votes, dependent: :destroy
 
     # displays posts in descending order, newest posts first
     default_scope { order('created_at DESC') }
