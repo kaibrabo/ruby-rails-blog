@@ -4,9 +4,17 @@
         <h1>Post <%= @post.id %></h1>
 
         <div class="show-title">
-            <p class="show-title-text">
-                <%= @post.title %></p>
-                <p>submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %></p>
+            <div class="show-title-heading">
+                <p class="show-title-text">
+                    <%= @post.title %>
+                </p>
+                <div class="voting-partial">
+                    <%# voting partial view %>
+                    <%= render partial: 'votes/voting', locals: { post: @post } %>
+                </div>
+            </div>
+
+            <p>submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %></p>
         </div>
         
         <div class="show-body">

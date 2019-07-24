@@ -18,7 +18,6 @@
     
     <div class="posts-container">
         <h1 class="all-posts-title">All Posts</h1>
-    
         <div class="all-posts-buttons">
             <button class="new-post-button">
                 <%= link_to "New Post", new_topic_post_path(@topic) %>
@@ -30,8 +29,14 @@
                 <div class="post">
                 
                     <%= link_to(topic_post_path(@topic, post)) do %>
-                        <div class="post-title">
-                            <%= post.title %>
+                        <div class="post-heading">
+                            <div class="post-title">
+                                <%= post.title %>
+                            </div>
+                            <div class="voting-partial">
+                                <%# voting partial view %>
+                                <%= render partial: 'votes/voting', locals: { post: post } %>
+                            </div>
                         </div>
                         <div class="post-body">
                             <%= post.body %>
