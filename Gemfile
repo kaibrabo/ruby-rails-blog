@@ -48,6 +48,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'nyan-cat-formatter'
   gem 'shoulda'
+  gem 'factory_bot_rails'
 end
 
 group :development do
