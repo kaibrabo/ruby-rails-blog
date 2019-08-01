@@ -33,9 +33,14 @@
                             <div class="post-title">
                                 <%= post.title %>
                             </div>
-                            <div class="voting-partial">
-                                <%# voting partial view %>
-                                <%= render partial: 'votes/voting', locals: { post: post } %>
+                            <div class="favorite-voting-container">
+                                <% if current_user %>
+                                    <%= render partial: 'favorites/favorite', locals: { post: post } %>
+                                <% end %>
+                                <div class="voting-partial">
+                                    <%# voting partial view %>
+                                    <%= render partial: 'votes/voting', locals: { post: post } %>
+                                </div>
                             </div>
                         </div>
                         <div class="post-body">

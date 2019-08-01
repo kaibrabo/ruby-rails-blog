@@ -15,7 +15,7 @@ class VotesController < ApplicationController
     def update_vote(new_value)
         @post = Post.find(params[:post_id])
         @vote = @post.votes.where(user_id: current_user.id).first
-
+        
         if @vote
             @vote.update_attribute(:value, new_value)
         else

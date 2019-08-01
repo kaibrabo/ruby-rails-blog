@@ -38,6 +38,14 @@
     margin: 5px 5px 0;
 }
 
+.favorite-voting-container {
+    margin: 5px 0 0;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .post-body {
     margin: 10px 5px;
     font-size: 14px;
