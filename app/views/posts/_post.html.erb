@@ -1,0 +1,15 @@
+<div class="post-partial">
+    <%= render partial: 'votes/voting', locals: { post: post } %>
+    <div class="post-body">
+        <h4>
+            <%= link_to post.title, topic_post_path(post.topic, post) %>
+        </h4>
+        <p>
+            submitted <%= time_ago_in_words(post.created_at) %> 
+            ago by <%= post.user.name %>
+        </p>
+        <p>
+            <%= post.comments.count %>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="user-profile-container">
+    <div class="user-details">
+        <% avatar_url = @user.avatar_url(128) %>
+        <% if avatar_url %>
+            <div class="avatar">
+                <%= image_tag avatar_url, class: 'avatar-image' %>
+            </div>
+        <% end %>
+        <h2><%= @user.name %></h2>
+        <p>
+            <%= pluralize(@user.posts.count, 'post') %>,
+            <%= pluralize(@user.comments.count, 'comment') %>
+        </p>
+    </div>
+    <div class="user-activity">
+        <h2>Posts</h2>
+        <%= render @user.posts %>
+        <h2>Comments</h2>
+        <%= render @user.comments %>
+    </div>
+</div>
