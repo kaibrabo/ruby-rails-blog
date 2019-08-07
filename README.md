@@ -1,3 +1,14 @@
+# Start
+Ruby version: 2.4.0
+Rails version: 5.2.3
+
+In Terminal: 
+1. `bundle install`
+
+2. `rails s`
+
+
+
 ## Formatting
 In Terminal:
 `cd /myproject`
