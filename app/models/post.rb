@@ -8,6 +8,10 @@ class Post < ApplicationRecord
     # displays posts in descending order, newest posts first
     default_scope { order('rank DESC') }
 
+    # displays ALL posts for authenticated users, 
+    # displays only PUBLIC topics to unauthenticated users
+    scope :visible_to, -> (user) { user ? all : joins(:topic).where('topics.public' => true) }
+
     validates :title, length: { minimum: 5 }, presence: true
     validates :body, length: { minimum: 20 }, presence: true
     validates :topic, presence: true
