@@ -1,18 +1,26 @@
+.welcome {
+	height: 110vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .landing-container {
-	max-width: 700px;
+	max-width: 900px;
 	width: 100%;
 	height: 400px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 .landing-header {
-	width: 100%;
-	height: 250px;
+	width: 50%;
+	height: 100%;
 	color: black;
-	background-image: url(couple.png);
-	background-position: center;
 	background-size: 100% auto;
-	margin: 50px 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .landing-header:active {
@@ -20,13 +28,12 @@
 }
 
 .landing-header-text {
-	width: 270px;
 	height: 60px;
-	padding: 30px 0;
-	text-align: center;
+	margin: 10px auto 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
+	text-align: center;
 }
 
 .landing-header-text p {
@@ -40,23 +47,71 @@
 
 .landing-header-sign-up {
 	width: 270px;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
 .landing-header-sign-up p,
-.landing-sign-up-button {
+.landing-sign-up-button,
+.landing-sign-in-button {
 	font-size: 16px;
 	margin: 10px 0;
 	text-align: center;
 }
 
-.landing-sign-up-button {
+.landing-sign-up-button,
+.landing-sign-in-button {
+	width: 100px;
 	text-align: center;
-	margin: 0 auto;
+	margin: 10px auto;
     border: 0.5px solid gray;
     border-radius: 2px;
 	padding: 3px 10px 5px;
 	color: black;
+}
+
+.landing-details {
+	width: 50%;
+	padding: 10px 0 0;
+}
+
+.landing-details-header {
+	margin: 0 auto;
+}
+
+.landing-details-header p {
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	margin: 5px 0;
+}
+
+.landing-details-points {
+	list-style-type: none;
+}
+
+.landing-details-points li.detail-point {
+	width: 300px;
+	margin: 0 auto;
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+
+// Icons
+.landing-details-points li.detail-point i {
+	margin: 4px 8px 0 0;
+	width: 30px;
+}
+
+.landing-details-points li.detail-point i.fa-calendar-check {
+	width: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+	.landing-container {
+		flex-direction: column;
+		align-items: center;
+	}
 }

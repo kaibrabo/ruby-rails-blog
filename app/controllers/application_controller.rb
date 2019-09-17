@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
     include SessionsHelper
 
+    # strings = {
+    #   LoginWelcome: "Welcome, #{@user}!",
+    #   # SumTingWong: "Something went wrong, try again?"
+    # }
+
     private
 
     def require_sign_in

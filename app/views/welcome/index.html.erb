@@ -1,21 +1,63 @@
-<div class="landing-container">
-    <% if !current_user %>
-    <section class="landing-header">
-        <div class="landing-header-text">
-            <p>
-                The Cannabis resource 
-            </p>
-            <p>
-                bringing the best!
-            </p>
-        </div>
+<div class="welcome">
+    <section class="landing-container">
+        <% if !current_user %>
+            <section class="landing-header">
+                <div class="landing-header-text">
+                    <p>
+                        See what's happening in
+                    </p>
+                    <p>
+                        Cannabis right now
+                    </p>
+                </div>
 
-        <div class="landing-header-sign-up">
-            <p>
-                new to blumelist?
-            </p>
-            <%= link_to "Sign Up", new_user_path, class: "landing-sign-up-button" %>
-        </div>
-    <section>
-    <% end %>
+                <div class="landing-header-sign-up">
+                    <p>
+                        new to blumelist?
+                    </p>
+                    <%= link_to "Sign Up", new_user_path, class: "landing-sign-up-button" %>
+                    <%= link_to "Sign In", new_session_path, class: "link_to landing-sign-in-button" %>
+                </div>
+            </section>
+
+            <div class="landing-details">
+                <div class="landing-details-header">
+                    <p>Gain access to top</p>
+                    <p>Cannabis information with the</p>
+                    <p>new BlumeList.com</p>
+                </div>
+
+                <ul class="landing-details-points">
+                    <li class="detail-point">
+                        <i class="fas fa-calendar-check"></i>
+                        <p>
+                            Stay up-to-date with <br />the largest Cannabis community
+                        </p>
+                    </li>
+
+                    <li class="detail-point">
+                        <i class="fas fa-seedling"></i>
+                        <p>
+                            Explore innovative growing and <br />extraction techniques
+                        </p>
+                    </li>
+                    
+                    <li class="detail-point">
+                        <i class="fas fa-users"></i>
+                        <p>
+                            Meet like-minded individuals and <br />share your passion
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        <% end %>
+
+        <% if current_user %>
+            <%# This will be a section for current & relevant articles %>
+            <div>
+                <h1>Current Articles</h1>
+            </div>
+        <% end %>
+
+    </section>
 </div>
