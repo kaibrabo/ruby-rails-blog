@@ -28,13 +28,21 @@
     outline: none;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background: white;
     color: black;
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    overflow-x: hidden;
 }
 
 a {
-    background: inherit;
     color: black;
 }
 
@@ -60,16 +68,20 @@ header {
     background-color: inherit;
 }
 
+.link_to:hover {
+    background: rgba(115, 175, 100, 0.527)
+}
+
 .logo {
     font-size: 16px;
 }
 
 .navbar {
-    width: 50%;
-    padding: 0 0 0 50px;
+    width: 30%;
+    padding: 5px 0 0 80px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style-type: none;
 }
 
@@ -131,7 +143,8 @@ main {
 .posts-container,
 .topics-container {
     width: 500px;
-    margin: 0 auto;
+    height: 100%;
+    margin: 20px auto 0;
 }
 
 textarea {
@@ -139,6 +152,8 @@ textarea {
 }
 
 .footer {
+    position: relative;
+    bottom: 0;
 	width: 100%;
 	height: 90px;
 	background-color: rgb(190, 190, 190);

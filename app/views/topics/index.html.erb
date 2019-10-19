@@ -1,18 +1,21 @@
-<div class="topics-container">
-    <h1 class="all-topics-title">Topics Index</h1>
-    
-    <div class="all-topics-buttons">
-        <button class="new-topic-button">
-            <%= link_to "New Topic", new_topic_path %>
-        </button>
-    </div>
+<div class="topics-container">    
+    <% if current_user.admin? %>
+        <div class="all-topics-buttons">
+            <button class="new-topic-button">
+                <%= link_to "New Topic", new_topic_path %>
+            </button>
+        </div>
+    <% end %>
     
     <!-- list all topics-->
     <% @topics.each do |topic| %>
-        <div class="topic-container">
-            <p class="topic title">
-                <%= link_to topic.name, topic %>
-            </p>
-        </div>
+        <%# Each Topic %>
+        <%= link_to(topic) do %>
+            <div class="topic-container">
+                <p class="topic">
+                    <%= topic.name %>
+                </p>
+            </div>
+        <% end %>
     <% end %>
 </div>

@@ -20,10 +20,10 @@
 			<ul class="navbar">
 				<% if current_user %>
 					<li>
-						<%= link_to "Shop", root_path, class: "link_to" %>
+						<%= link_to "growcal", "https://grow-calendar-react.firebaseapp.com", class: "link_to" %>
 					</li>				
 					<li>
-						<%= link_to "Topics", topics_path, class: "link_to" %>
+						<%= link_to "topics", topics_path, class: "link_to" %>
 					</li>
 				<% end %>
 
@@ -77,37 +77,37 @@
 			<%= yield %>
 		</main>
 
-	<section class="footer">
-        <div class="footer-learn-more">
-            <h3>Learn More</h3>
-            <p>
-                <%= link_to "How it works", faq_path, class: "" %>
-            </p>
-            <p>
-                <%= link_to "Contact Us", contact_path, class: "" %>
-            </p>
-        </div>
+		<section class="footer">
+			<div class="footer-learn-more">
+				<h3>Learn More</h3>
+				<p>
+					<%= link_to "How it works", faq_path, class: "" %>
+				</p>
+				<p>
+					<%= link_to "Contact Us", contact_path, class: "" %>
+				</p>
+			</div>
 
-        <div class="footer-company">
-            <h3>Company</h3>
-            <p>
-				<%= link_to "Our Team", about_path, class: "link_to" %>
-			</p>
-            <p>Jobs</p>
-        </div>
+			<div class="footer-company">
+				<h3>Company</h3>
+				<p>
+					<%= link_to "Our Team", about_path, class: "link_to" %>
+				</p>
+				<p>Jobs</p>
+			</div>
 
-        <div class="footer-community">
-            <h3>Community</h3>
-            <p>Blog</p>
-            <p>Help Center</p>
-        </div>
+			<div class="footer-community">
+				<h3>Community</h3>
+				<p>Blog</p>
+				<p>Help Center</p>
+			</div>
 
-        <div class="footer-terms">
-            <h3>Terms</h3>
-            <p>Legal</p>
-            <p>Privacy</p>
-        </div>
-    </section>
+			<div class="footer-terms">
+				<h3>Terms</h3>
+				<p>Legal</p>
+				<p>Privacy</p>
+			</div>
+		</section>
 
 		<script async src="https://kit.fontawesome.com/fe0bb2c6a9.js"></script>
 	</body>

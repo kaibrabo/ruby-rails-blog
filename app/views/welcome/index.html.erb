@@ -54,8 +54,10 @@
 
         <% if current_user %>
             <%# This will be a section for current & relevant articles %>
-            <div>
-                <h1>Current Articles</h1>
+            <div class="landing-feed">
+                <h1>Welcome <%= current_user.name.capitalize %></h1>
+                <!-- list all topics-->
+                <%= render template: "topics/index" %>
             </div>
         <% end %>
 
