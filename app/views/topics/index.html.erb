@@ -1,5 +1,5 @@
 <div class="topics-container">    
-    <% if current_user.admin? %>
+    <% if current_user %>
         <div class="all-topics-buttons">
             <button class="new-topic-button">
                 <%= link_to "New Topic", new_topic_path %>
